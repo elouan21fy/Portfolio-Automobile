@@ -1,0 +1,208 @@
+/**
+ * Composants réutilisables — Boutons, cartes
+ */
+
+/* --- Header / Navigation --- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: var(--space-md) var(--section-padding-x);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+
+.site-header:hover,
+.site-header.scrolled {
+  background: var(--color-bg);
+  border-bottom-color: var(--color-border);
+}
+
+.site-nav {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav__logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.site-nav__links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.site-nav__links a {
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.site-nav__links a:hover,
+.site-nav__links a[aria-current="page"] {
+  color: var(--color-text);
+}
+
+/* --- Boutons CTA --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--text-small);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  transition: border-color var(--transition-fast), color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-hover);
+}
+
+.btn--hero {
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+
+.btn--hero:hover {
+  border-color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Cartes projet (aperçu) --- */
+.project-card {
+  background: var(--color-bg-card);
+  overflow: hidden;
+  transition: transform var(--transition-normal);
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
+.project-card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card__image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--color-bg-elevated);
+  overflow: hidden;
+}
+
+.project-card__content {
+  padding: var(--space-lg);
+}
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-xs);
+}
+
+.project-card__text {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* --- Lightbox --- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.lightbox__close:hover {
+  color: var(--color-accent-hover);
+  border-color: var(--color-text-muted);
+}
+
+.lightbox__image-wrap {
+  position: relative;
+  width: 90vw;
+  height: 85vh;
+  max-width: 90vw;
+  max-height: 85vh;
+}
+
+.lightbox__image {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: auto;
+  min-height: auto;
+}
+
+.lightbox__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.lightbox__arrow:hover {
+  color: var(--color-accent-hover);
+  border-color: var(--color-text-muted);
+}
+
+.lightbox__arrow--prev {
+  left: var(--space-md);
+}
+
+.lightbox__arrow--next {
+  right: var(--space-md);
+}

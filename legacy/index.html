@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio automobile — Home</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" id="header">
+      <nav class="site-nav">
+        <a href="index.html" class="site-nav__logo" aria-current="page"
+          >Portfolio Auto</a
+        >
+        <ul class="site-nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ========== HERO ========== -->
+      <!-- Placeholder : une seule photo automobile forte, plein écran.
+           Critères : impact visuel, lumière maîtrisée, sujet automobile mis en valeur.
+           Éviter : images surchargées, cadrages faibles. -->
+      <section
+        class="hero"
+        data-tooltip="Critères photo hero : impact visuel fort, lumière maîtrisée, sujet auto mis en valeur. Une seule image, pas de slider."
+      >
+        <div class="hero__bg">
+          <!-- PLACEHOLDER IMAGE HERO : remplacer par votre image (ex. assets/hero.jpg) -->
+          <div
+            class="placeholder-image"
+            style="position: absolute; inset: 0; aspect-ratio: auto;"
+          >
+            [ Hero — Photo automobile forte ]
+          </div>
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__content">
+          <!-- PLACEHOLDER Titre : ex. "Photographe automobile" + localisation -->
+          <h1 class="hero__title">Photographie Automobile · Nantes</h1>
+          <!-- PLACEHOLDER Sous-titre : projets, collaborations -->
+          <p class="hero__subtitle">
+            Projets automobiles, car spotting, collaborations
+          </p>
+          <a href="contact.html" class="btn btn--hero">Contact</a>
+        </div>
+      </section>
+
+      <!-- ========== GALERIE ÉDITORIALE ========== -->
+      <!-- 2 à 3 grandes images fortes uniquement, pas de remplissage. Mise en page aérée. -->
+      <section class="section" aria-labelledby="galerie-title">
+        <div class="container">
+          <h2 id="galerie-title" class="section__title">
+            Galerie éditoriale
+          </h2>
+          <div
+            class="gallery-editorial gallery-editorial--three"
+            data-tooltip="Images fortes uniquement, pas de remplissage. Qualité over quantité."
+          >
+            <div class="gallery-editorial__item">
+              <div class="placeholder-image">[ Image auto 1 ]</div>
+            </div>
+            <div class="gallery-editorial__item">
+              <div class="placeholder-image">[ Image auto 2 ]</div>
+            </div>
+            <div class="gallery-editorial__item">
+              <div class="placeholder-image">[ Image auto 3 ]</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== APERÇU DES PROJETS ========== -->
+      <!-- Présenter des projets (car spotting, shootings passionnés, vidéo), pas des prestations commerciales. -->
+      <section class="section" aria-labelledby="projets-title">
+        <div class="container">
+          <h2 id="projets-title" class="section__title">Aperçu des projets</h2>
+          <div
+            class="projects-preview"
+            data-tooltip="Présenter des projets et univers, pas des prestations ou tarifs."
+          >
+            <!-- Bloc 1 : Car spotting urbain -->
+            <article class="project-card">
+              <div class="project-card__image">
+                <div class="placeholder-image">[ Car spotting urbain ]</div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Car spotting urbain</h3>
+                <p class="project-card__text">
+                  <!-- PLACEHOLDER : court texte descriptif -->
+                  Repérages en ville, ambiances urbaines, modèles rares.
+                </p>
+              </div>
+            </article>
+            <!-- Bloc 2 : Shootings passionnés -->
+            <article class="project-card">
+              <div class="project-card__image">
+                <div class="placeholder-image">[ Shootings passionnés ]</div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Shootings passionnés</h3>
+                <p class="project-card__text">
+                  <!-- PLACEHOLDER : court texte descriptif -->
+                  Séances dédiées, lumière naturelle et artificielle.
+                </p>
+              </div>
+            </article>
+            <!-- Bloc 3 : Vidéo automobile -->
+            <article class="project-card">
+              <div class="project-card__image">
+                <div class="placeholder-image">[ Vidéo automobile ]</div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Vidéo automobile</h3>
+                <p class="project-card__text">
+                  <!-- PLACEHOLDER : court texte descriptif -->
+                  Captations dynamiques, montages courts, collaborations.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== IMAGE FORTE ISOLÉE ========== -->
+      <!-- Une seule image plein largeur : rythme premium, respiration. -->
+      <section
+        class="section"
+        data-tooltip="Image respirante, rythme premium. Une seule image forte pour marquer une pause visuelle."
+      >
+        <div class="single-image">
+          <div class="placeholder-image">
+            [ Image automobile plein largeur — rythme ]
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CTA FINAL ========== -->
+      <section class="cta-block">
+        <p class="cta-block__text">
+          <!-- PLACEHOLDER : texte minimal -->
+          Retombez amoureux de votre voiture.
+        </p>
+        <a href="contact.html" class="btn">Discuter d'un projet</a>
+      </section>
+    </main>
+
+    <script>
+      // Header : fond au scroll (optionnel)
+      const header = document.getElementById("header");
+      if (header) {
+        window.addEventListener("scroll", () => {
+          header.classList.toggle("scrolled", window.scrollY > 50);
+        });
+      }
+    </script>
+  </body>
+</html>

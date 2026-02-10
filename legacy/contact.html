@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio automobile — Contact</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" id="header">
+      <nav class="site-nav">
+        <a href="index.html" class="site-nav__logo">Portfolio Auto</a>
+        <ul class="site-nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ========== CONTACT ========== -->
+      <!-- Fonctionnel avant esthétique : email, réseaux, localisation clairs. -->
+      <section
+        class="section"
+        aria-labelledby="contact-title"
+        data-tooltip="Fonctionnel avant esthétique : email et liens cliquables, infos lisibles."
+      >
+        <div class="container">
+          <h1 id="contact-title" class="section__title">Contact</h1>
+          <div class="contact-block">
+            <!-- PLACEHOLDER : texte simple -->
+            <p class="contact-block__text">
+              Pour un projet photo ou vidéo automobile, une collaboration ou
+              une simple discussion.
+            </p>
+            <ul class="contact-list">
+              <!-- PLACEHOLDER : email -->
+              <li class="contact-list__item">
+                <span class="contact-list__label">Email</span>
+                <a href="mailto:contact@exemple.fr">contact@exemple.fr</a>
+              </li>
+              <!-- PLACEHOLDER : Instagram -->
+              <li class="contact-list__item">
+                <span class="contact-list__label">Instagram</span>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"
+                  >@placeholder_instagram</a
+                >
+              </li>
+              <!-- PLACEHOLDER : TikTok -->
+              <li class="contact-list__item">
+                <span class="contact-list__label">TikTok</span>
+                <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer"
+                  >@placeholder_tiktok</a
+                >
+              </li>
+              <!-- PLACEHOLDER : localisation Nantes - Pays de la Loire -->
+              <li class="contact-list__item">
+                <span class="contact-list__label">Localisation</span>
+                <span>Nantes — Pays de la Loire</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const header = document.getElementById("header");
+      if (header) {
+        window.addEventListener("scroll", () => {
+          header.classList.toggle("scrolled", window.scrollY > 50);
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+/**
+ * Portfolio automobile — Feuille principale
+ * Import des modules CSS (variables, base, composants, layout)
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap");
+
+@import "./variables.css";
+@import "./base.css";
+@import "./components.css";
+@import "./layout.css";
