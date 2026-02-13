@@ -7,7 +7,7 @@ import { LightboxProvider, LightboxTrigger, type LightboxImage } from "./Lightbo
 const GALERIE = "/galerie";
 
 const LIGHTBOX_IMAGES: LightboxImage[] = [
-  { src: `${GALERIE}/370Z pro cold 1_1-5 copie.jpg`, alt: "Hero — Strong automotive photo" },
+  { src: `${GALERIE}/carspot4.jpg`, alt: "Hero — Strong automotive photo" },
   { src: `${GALERIE}/volant.jpg`, alt: "Auto image 1" },
   { src: `${GALERIE}/spidster.jpg`, alt: "Auto image 2", objectPosition: "50% 65%" },
   { src: `${GALERIE}/phareporsche.jpg`, alt: "Auto image 3" },
