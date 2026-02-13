@@ -6,29 +6,37 @@ import { LightboxProvider, LightboxTrigger, type LightboxImage } from "../Lightb
 const GALERIE = "/galerie";
 
 const carSpottingFiles = [
-  "370Z%20pro%20cold%201_1-8%20copie.jpg",
-  "370Z%20pro%20cold%201_1-9%20copie.jpg",
-  "CarreraS%20x%20Speedster-1%20copie.jpg",
-  "CarreraS%20x%20Speedster-2%20copie.jpg",
-  "CarreraS%20x%20Speedster-3%20copie.jpg",
+  "carspot1.jpg",
+  { file: "carspot2.jpg", objectPosition: "50% 90%" },
+  { file: "carspot3.jpg", objectPosition: "50% 90%" },
+  "carspot4.jpg",
+  "carspot5.jpg",
+  "carspot6.jpg",
 ];
 
 const collaborationFiles = [
-  "CarreraS%20x%20Speedster-4%20copie.jpg",
-  "CarreraS%20x%20Speedster-5%20copie.jpg",
-  "CarreraS%20x%20Speedster-6%20copie.jpg",
-  "CarreraS%20x%20Speedster-7%20copie.jpg",
-  "CarreraS%20x%20Speedster-8%20copie.jpg",
+  { file: "collaborations1.jpg", objectPosition: "50% 90%" },
+  { file: "collaborations2.jpg", objectPosition: "50% 80%" },
+  { file: "collaborations3.jpg", objectPosition: "50% 55%" },
+  "collaborations4.jpg",
+  "collaborations5.jpg",
+  "collaborations6.jpg",
 ];
 
+type GalleryItem = string | { file: string; objectPosition?: string };
+
+const getFile = (item: GalleryItem) => (typeof item === "string" ? item : item.file);
+
 const LIGHTBOX_IMAGES: LightboxImage[] = [
-  ...carSpottingFiles.map((file, i) => ({
-    src: `${GALERIE}/${file}`,
+  ...carSpottingFiles.map((item, i) => ({
+    src: `${GALERIE}/${getFile(item)}`,
     alt: `Car spotting ${i + 1}`,
+    objectPosition: typeof item === "object" ? item.objectPosition : undefined,
   })),
-  ...collaborationFiles.map((file, i) => ({
-    src: `${GALERIE}/${file}`,
+  ...collaborationFiles.map((item, i) => ({
+    src: `${GALERIE}/${getFile(item)}`,
     alt: `Collaboration ${i + 1}`,
+    objectPosition: typeof item === "object" ? item.objectPosition : undefined,
   })),
 ];
 
@@ -39,11 +47,11 @@ export default function ProjetsPageContent() {
         <section className="section" aria-labelledby="projets-page-title">
           <div className="container">
             <h1 id="projets-page-title" className="section__title">
-              Projets
+              Projects
             </h1>
             <p className="section__intro">
-              Sélection de projets personnels et collaborations : car spotting,
-              shootings passionnés et vidéo automobile.
+              Selection of personal projects and collaborations: car spotting,
+              passion shoots and automotive video.
             </p>
 
             <section
@@ -54,14 +62,15 @@ export default function ProjetsPageContent() {
                 Car spotting
               </h2>
               <div className="series__grid">
-                {carSpottingFiles.map((src, i) => (
-                  <LightboxTrigger key={src} index={i} className="series__grid-item">
+                {carSpottingFiles.map((item, i) => (
+                  <LightboxTrigger key={getFile(item)} index={i} className="series__grid-item">
                     <Image
-                      src={`${GALERIE}/${src}`}
+                      src={`${GALERIE}/${getFile(item)}`}
                       alt={LIGHTBOX_IMAGES[i].alt}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 260px"
+                      style={typeof item === "object" && item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                     />
                   </LightboxTrigger>
                 ))}
@@ -73,17 +82,18 @@ export default function ProjetsPageContent() {
               aria-labelledby="serie-collabs"
             >
               <h2 id="serie-collabs" className="series__title">
-                Collaborations · passionnés
+                Collaborations · passion
               </h2>
               <div className="series__grid">
-                {collaborationFiles.map((src, i) => (
-                  <LightboxTrigger key={src} index={5 + i} className="series__grid-item">
+                {collaborationFiles.map((item, i) => (
+                  <LightboxTrigger key={getFile(item)} index={6 + i} className="series__grid-item">
                     <Image
-                      src={`${GALERIE}/${src}`}
-                      alt={LIGHTBOX_IMAGES[5 + i].alt}
+                      src={`${GALERIE}/${getFile(item)}`}
+                      alt={LIGHTBOX_IMAGES[6 + i].alt}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 260px"
+                      style={typeof item === "object" && item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                     />
                   </LightboxTrigger>
                 ))}
@@ -95,7 +105,7 @@ export default function ProjetsPageContent() {
               aria-labelledby="serie-video"
             >
               <h2 id="serie-video" className="series__title">
-                Vidéo
+                Video
               </h2>
               <div className="series-video__grid">
                 <video
@@ -105,7 +115,7 @@ export default function ProjetsPageContent() {
                   loop
                   muted
                   playsInline
-                  aria-label="Vidéo R8"
+                  aria-label="R8 video"
                 />
               </div>
             </section>

@@ -25,7 +25,7 @@ export default function Header() {
           className="site-nav__logo"
           aria-current={pathname === "/" ? "page" : undefined}
         >
-          Portfolio Auto
+          Elouan's Portfolio
         </Link>
         <ul className="site-nav__links">
           <li>
@@ -41,7 +41,7 @@ export default function Header() {
               href="/projets"
               aria-current={pathname === "/projets" ? "page" : undefined}
             >
-              Projets
+              Projects
             </Link>
           </li>
           <li>

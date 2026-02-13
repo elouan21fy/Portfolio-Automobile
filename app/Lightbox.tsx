@@ -10,7 +10,7 @@ import {
 } from "react";
 import Image from "next/image";
 
-export type LightboxImage = { src: string; alt: string };
+export type LightboxImage = { src: string; alt: string; objectPosition?: string };
 
 type LightboxContextValue = {
   images: LightboxImage[];
@@ -139,6 +139,7 @@ function LightboxModal() {
           fill
           className="lightbox__image"
           sizes="100vw"
+          style={current.objectPosition ? { objectPosition: current.objectPosition } : undefined}
           unoptimized={current.src.startsWith("data:")}
         />
       </div>

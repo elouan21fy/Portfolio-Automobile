@@ -1,9 +1,9 @@
 import ProjetsPageContent from "./ProjetsPageContent";
 
 export const metadata = {
-  title: "Portfolio automobile — Projets",
+  title: "Automotive Portfolio — Projects",
   description:
-    "Sélection de projets personnels et collaborations : car spotting, shootings passionnés et vidéo automobile.",
+    "Selection of personal projects and collaborations: car spotting, passion shoots and automotive video.",
 };
 
 export default function ProjetsPage() {

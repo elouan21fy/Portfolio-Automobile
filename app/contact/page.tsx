@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Portfolio automobile — Contact",
+  title: "Automotive Portfolio — Contact",
   description:
-    "Contact pour un projet photo ou vidéo automobile, une collaboration ou une discussion.",
+    "Contact for an automotive photo or video project, a collaboration or a discussion.",
 };
 
 export default function ContactPage() {
@@ -17,12 +17,12 @@ export default function ContactPage() {
           </h1>
           <div className="contact-block">
             <p className="contact-block__text">
-              Pour un projet photo ou vidéo automobile, une collaboration ou une
+              For an automotive photo or video project, a collaboration or a
               simple discussion.
             </p>
             <ul className="contact-list">
               <li className="contact-list__item">
-                <span className="contact-list__label">Téléphone</span>
+                <span className="contact-list__label">Phone</span>
                 <a href="tel:+33752042867">07 52 04 28 67</a>
               </li>
               <li className="contact-list__item">
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </a>
               </li>
               <li className="contact-list__item">
-                <span className="contact-list__label">Localisation</span>
+                <span className="contact-list__label">Location</span>
                 <span>Nantes - Pays de la Loire  /  Cannes - 06</span>
               </li>
             </ul>

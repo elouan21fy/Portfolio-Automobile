@@ -7,11 +7,11 @@ import { LightboxProvider, LightboxTrigger, type LightboxImage } from "./Lightbo
 const GALERIE = "/galerie";
 
 const LIGHTBOX_IMAGES: LightboxImage[] = [
-  { src: `${GALERIE}/370Z pro cold 1_1-5 copie.jpg`, alt: "Hero — Photo automobile forte" },
-  { src: `${GALERIE}/volant.jpg`, alt: "Image auto 1" },
-  { src: `${GALERIE}/142A5202.jpeg`, alt: "Image auto 2" },
-  { src: `${GALERIE}/142A5220.jpeg`, alt: "Image auto 3" },
-  { src: `${GALERIE}/CarreraS x Speedster-8 copie.jpg`, alt: "Image automobile plein largeur" },
+  { src: `${GALERIE}/370Z pro cold 1_1-5 copie.jpg`, alt: "Hero — Strong automotive photo" },
+  { src: `${GALERIE}/volant.jpg`, alt: "Auto image 1" },
+  { src: `${GALERIE}/spidster.jpg`, alt: "Auto image 2", objectPosition: "50% 65%" },
+  { src: `${GALERIE}/phareporsche.jpg`, alt: "Auto image 3" },
+  { src: `${GALERIE}/CarreraS x Speedster-8 copie.jpg`, alt: "Full-width automotive image" },
 ];
 
 export default function HomePageContent() {
@@ -33,10 +33,10 @@ export default function HomePageContent() {
           <div className="hero__overlay" aria-hidden />
           <div className="hero__content">
             <h1 className="hero__title">
-              Photographie Automobile · Nantes
+              Automotive & Premium Event Photography · Nantes/Ouest
             </h1>
             <p className="hero__subtitle">
-              Projets automobiles, documentation, collaborations
+              Visual storytelling for high-end automotive brands, private events and performance culture.
             </p>
             <Link href="/contact" className="btn btn--hero">
               Contact
@@ -47,7 +47,7 @@ export default function HomePageContent() {
         <section className="section" aria-labelledby="galerie-title">
           <div className="container">
             <h2 id="galerie-title" className="section__title">
-              Galerie
+              Gallery Preview
             </h2>
             <div className="gallery-editorial gallery-editorial--three">
               <LightboxTrigger index={1} className="gallery-editorial__item">
@@ -57,6 +57,7 @@ export default function HomePageContent() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  style={LIGHTBOX_IMAGES[1].objectPosition ? { objectPosition: LIGHTBOX_IMAGES[1].objectPosition } : undefined}
                 />
               </LightboxTrigger>
               <LightboxTrigger index={2} className="gallery-editorial__item">
@@ -66,6 +67,7 @@ export default function HomePageContent() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  style={LIGHTBOX_IMAGES[2].objectPosition ? { objectPosition: LIGHTBOX_IMAGES[2].objectPosition } : undefined}
                 />
               </LightboxTrigger>
               <LightboxTrigger index={3} className="gallery-editorial__item">
@@ -75,6 +77,7 @@ export default function HomePageContent() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  style={LIGHTBOX_IMAGES[3].objectPosition ? { objectPosition: LIGHTBOX_IMAGES[3].objectPosition } : undefined}
                 />
               </LightboxTrigger>
             </div>
@@ -84,7 +87,7 @@ export default function HomePageContent() {
         <section className="section" aria-labelledby="projets-title">
           <div className="container">
             <h2 id="projets-title" className="section__title">
-              Aperçu des projets
+              Projects overview
             </h2>
             <div className="projects-preview">
               <Link href="/projets#serie-spotting" className="project-card project-card--link">
@@ -100,7 +103,7 @@ export default function HomePageContent() {
                 <div className="project-card__content">
                   <h3 className="project-card__title">Car spotting</h3>
                   <p className="project-card__text">
-                    Repérages en ville, ambiances urbaines, modèles rares.
+                    City spotting, urban vibes, rare models.
                   </p>
                 </div>
               </Link>
@@ -108,16 +111,16 @@ export default function HomePageContent() {
                 <div className="project-card__image">
                   <Image
                     src={`${GALERIE}/led140i.jpg`}
-                    alt="Shootings passionnés"
+                    alt="Passion shoots"
                     fill
                     className="object-cover"
                     sizes="(max-width: 900px) 100vw, 33vw"
                   />
                 </div>
                 <div className="project-card__content">
-                  <h3 className="project-card__title">Shootings passionnés</h3>
+                  <h3 className="project-card__title">Passion shoots</h3>
                   <p className="project-card__text">
-                    Séances dédiées, lumière naturelle.
+                    Dedicated sessions, natural light.
                   </p>
                 </div>
               </Link>
@@ -125,16 +128,16 @@ export default function HomePageContent() {
                 <div className="project-card__image">
                   <Image
                     src={`${GALERIE}/r8arrière-droit.jpg`}
-                    alt="Vidéo automobile"
+                    alt="Automotive video"
                     fill
                     className="object-cover"
                     sizes="(max-width: 900px) 100vw, 33vw"
                   />
                 </div>
                 <div className="project-card__content">
-                  <h3 className="project-card__title">Vidéo automobile</h3>
+                  <h3 className="project-card__title">Automotive video</h3>
                   <p className="project-card__text">
-                    Captations dynamiques, montages courts, collaborations.
+                    Dynamic captures, short edits, collaborations.
                   </p>
                 </div>
               </Link>
@@ -156,10 +159,10 @@ export default function HomePageContent() {
 
         <section className="cta-block">
           <p className="cta-block__text">
-            Retombez amoureux de votre voiture.
+            Fall in love with your car again.
           </p>
           <Link href="/contact" className="btn">
-            Discuter d&apos;un projet
+            Discuss a project
           </Link>
         </section>
       </main>

@@ -3,8 +3,8 @@ import "../legacy/css/main.css";
 import Header from "./Header";
 
 export const metadata: Metadata = {
-  title: "Portfolio automobile — Home",
-  description: "Photographie Automobile · Nantes. Projets automobiles, car spotting, collaborations.",
+  title: "Automotive Portfolio — Home",
+  description: "Automotive Photography · Nantes. Automotive projects, car spotting, collaborations.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body>
         <Header />
         {children}
